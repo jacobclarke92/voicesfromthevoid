@@ -63,7 +63,8 @@ camera_auto_detect=1
 display_auto_detect=0
 
 # Enable I2C interface
-dtparam=i2c_arm=on
+# note: Slow baudrate for PiWatcher
+dtparam=i2c_arm=on,i2c_arm_baudrate=50000
 
 # Enable watchdog
 dtparam=watchdog=on
