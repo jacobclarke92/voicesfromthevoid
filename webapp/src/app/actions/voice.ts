@@ -42,3 +42,19 @@ export async function getVolume(voice: Voice) {
 export async function setVolume(voice: number, volume: number) {
   return kv.set(`voice${voice}_volume`, volume)
 }
+
+export async function getLastUpdated(voice: Voice) {
+  return (await kv.get<number>(`voice${voice}_lastUpdated`)) || 0
+}
+
+export async function updated(voice: number) {
+  return kv.set(`voice${voice}_lastUpdated`, Date.now())
+}
+
+export async function getLastPing(voice: Voice) {
+  return (await kv.get<number>(`voice${voice}_lastPing`)) || 0
+}
+
+export async function ping(voice: Voice) {
+  return kv.set(`voice${voice}_lastPing`, Date.now())
+}
