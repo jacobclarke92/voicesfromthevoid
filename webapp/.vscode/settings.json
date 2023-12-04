@@ -1,0 +1,38 @@
+{
+  "typescript.tsdk": "common/temp/node_modules/.pnpm/typescript@5.2.2/node_modules/typescript/lib",
+  "typescript.preferences.importModuleSpecifier": "relative",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ],
+  "eslint.workingDirectories": ["./apps", "./packages", "./common"],
+  "eslint.nodePath": "./common/temp/node_modules",
+  "files.associations": {
+    "*.json": "jsonc"
+  },
+  "files": {
+    "associations": {
+      "*.json": "jsonc"
+    },
+    "exclude": {
+      "**/.git": true,
+      "**/.svn": true,
+      "**/.hg": true,
+      "**/CVS": true,
+      "**/.DS_Store": true,
+      "**/Thumbs.db": true,
+      "**/.eslintcache": true,
+      "**/dumpster": true,
+      "**/.rush": true,
+      "**/.turbo": true
+    },
+    "watcherExclude": {
+      "**/pnpm-store/**": true
+    }
+  }
+}

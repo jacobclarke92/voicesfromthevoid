@@ -1,5 +1,7 @@
-import { getConfig } from '@/app/actions/fromPi'
-import { NextRequest } from 'next/server'
+import type { NextRequest } from 'next/server'
+
+import { getConfig } from '../../../actions/fromPi'
+import type { Voice } from '../../../constants/voices'
 
 export const dynamic = 'force-dynamic'
 
@@ -9,7 +11,7 @@ type Route = (typeof routes)[number]
 export async function GET(request: NextRequest, { params }: { params: { voice: string; route: Route } }) {
   const { voice: _voice, route } = params
   if (isNaN(parseInt(_voice))) return new Response(null, { status: 400 })
-  const voice = parseInt(_voice)
+  const voice = parseInt(_voice) as Voice
 
   switch (route) {
     case 'config': {
