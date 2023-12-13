@@ -1,0 +1,23 @@
+{
+  "name": "voicesfromthevoid-client",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/daemon.ts",
+  "scripts": {
+    "config": "ts-node src/update-config.ts",
+    "ping": "ts-node src/ping.ts"
+  },
+  "author": "Jacob Clarke <jacob@bigfish.tv>",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.3.1"
+  },
+  "devDependencies": {
+    "@bigfish/eslint-config": "^0.0.14",
+    "@bigfish/prettier-config": "^0.0.14",
+    "@types/node": "^20.10.4",
+    "eslint": "^8",
+    "ts-node": "^10.9.2",
+    "typescript": "^5"
+  }
+}
